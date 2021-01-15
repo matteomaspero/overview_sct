@@ -1,8 +1,6 @@
 
 # Overview sCT
 
-
-
 Repository to collect all the references on generation of synthetic computed tomography (sCT) with deep learning/convolutional networks. Generated from Spadea MF, Maspero M et al Med. Phys. 2021 (submitted).
 
 ## License
@@ -16,6 +14,12 @@ This work is licensed under a
 [Creative Commons Attribution-ShareAlike 4.0 International License][cc-by-sa].
 
 [![CC BY-SA 4.0][cc-by-sa-image]][cc-by-sa]
+
+## Contributors
+
+Maspero M is the owner administrator of the project. Spadea Maria Francesca and Paolo Zaffino greatyl contributed to the data collection for the pubication.
+
+The following added content: ...
 
 ## MRI without dose evaluation
 
