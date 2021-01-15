@@ -43,7 +43,7 @@ Brain <br>Prostate	|	16<br>22	|		|		|	LoO	|	n.a.	|	T1	|	2.5D patch	|		CNN+ 	|	ri
 Brain	|	15	|		|		|	x5	|	1.0	|	T1 Gd	|	2D	|		GAN<sup>\*</sup> 	|	def	|	89±10	|	26.6±1.2	|	.83±.03	| tissues | [Emami2018](https://doi.org/10.1002/mp.13047)	| 2018-06-14    
 Prostate	|	20	|		|		|	5x	|	1.5	|	2D T1 TSE	|	2D<br>3D	|		U-net	|	def	|	41±5<br>38±5	|		|		|	DSC bone 	| [Fu2019](https://doi.org/10.1002/mp.13672)| 2019-06-20 |
 Brain	|	98CT 84MR 	|		|	10	|		|	3	|	3D T2	|	2D |		GAN	|	no	|	19±3	|	65.4±0.9	|	.25±.01	|		| [Jin2019](https://doi.org/10.3390/s19102361) | 2019-05-22 |
-Pelvis human <br> Pelvis canine	|	27<br>18	|		|		|	3x	|	3<br>1.5	|	3D T1 GRE mDixon 	|	3D	|		U-net	|	def	|	32±8	|	36.5±1.6	|		|	MAE/DSC bone surf dist<0.5 mm |  [Florkow2020](https://doi.org/10.1002/mrm.28008) | 2019-10-08 |
+Pelvis human <br> Pelvis canine	|	27<br>18	|		|		|	3x	|	3<br>1.5	|	3D T1 GRE mDixon 	|	3D	|		U-net	|	def	|	32±8	|	36.5±1.6	|		|	MAE/DSC bone surf dist<0.5 mm |  [Florkow2019](https://doi.org/10.1002/mrm.28008) | 2019-10-08 |
 H&N	|	23	|		|	10	|		|	1.5|	T2	|		|	U-net	|	def	|	131±24	|		|		|	MAE, ME soft tis./bone | [Wang2019](https://doi.org/10.3389/fonc.2019.01333) | 2019-11-29|
 Abdomen |	10<sup>v</sup>	|		|	10	|	LoO	|		|	mDixon |	2D	|	GAN |	def	|	61±3	|		|		|	CC |  [Xu2019](https://doi.org/10.1109/ACCESS.2019.2951924) | 2019-11-06 |
 Brain <br> Pelvis	|	24<br>20	|		|		|	LoO	|	n.a. <br>n.a.	|	T1<br>3D T2  |	3D patch	|	GAN	|	rig	|	56±9<br>51±16	|	26.6±2.3<br>24.5±2.6	|		|	NCC, Hausdorff on body	|  [Lei2019](https://doi.org/10.1002/mp.13617) | 2019-05-21 |
