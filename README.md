@@ -15,6 +15,8 @@ This work is licensed under a
 
 [![CC BY-SA 4.0][cc-by-sa-image]][cc-by-sa]
 
+In short, this means that anyone, even a commercial entity may re-use the content of this page as long as it will cite our paper and the source.
+
 ## Contributors
 
 Maspero M is the owner administrator of the project. Spadea Maria Francesca and Paolo Zaffino greatyl contributed to the data collection for the pubication.
