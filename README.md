@@ -21,6 +21,12 @@ Maspero M is the owner administrator of the project. Spadea Maria Francesca and 
 
 The following added content: ...
 
+## Make the table sortable
+
+If you wish to extend the interaction with the tables, you can sort the columns in your favourite browser, as described [here](https://github.com/Mottie/GitHub-userscripts/wiki/GitHub-sort-content). We have tested on Chrome the following combination:
+* install [Tampermonkey](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo/related);
+* install [Github Sort Content](https://greasyfork.org/en/scripts/21373-github-sort-content);
+
 ## MRI without dose evaluation
 
 | Tumour site   | train | val | test | x-fold | field [T] | sequence | conf | arch | pair reg | MAE [HU] | PSNR [dB] | SSIM | others |  reference    | pub date |
