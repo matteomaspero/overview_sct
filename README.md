@@ -89,7 +89,7 @@ Abdomen	|	12	|		 		| 	 |	4x	| 0.3 1.5 |  GRE  |	2D | GAN<sup>\*</sup> <br> No	|	
 Brain	|	242<sup>m,t</sup>	|		 	81	| 79	 |		| 3 1.5|  3D T1 GRE±Gd  |	3D patch| CNN<br>U-net	|	def	| 81±22<br>90±21 | |tissues |	x	| 0.13±0.13<br>0.31±0.18  | 99.6±0.3<sup>2</sup><br>99.4±0.5<sup>2</sup>  | <±0.15  |  γ<sub> 3</sub>  | [Andres2020](https://doi.org/10.1016/j.ijrobp.2020.05.006) | 2020-11   |
  Rectum	|	46<sup></sup>m	|		 		| 44	 |		| 1.5 | 3D T2  |	2D | GAN	|	def	| 35±7 | | ME bone | 	x	| <±0.8 | 99.8±0.1<sup>2</sup>  | <1%  |  γ<sub> 3</sub> γ<sub>1</sub>  | [Bird2021](https://doi.org/10.1016/j.radonc.2020.11.027) | 2020-11-29 |  
  Pelvis	|	26	|		 15		| 10+19<sup>m</sup>	 |		| 0.35 1.5/3 | 3D T2  |	2.5D | GAN<sup>\*</sup>	|	def	| 41±4 | 31.4±1 | ME MSE bone | 	x	| <±1 | | <1.5%  |   | [Fetty2020](https://doi.org/10.1088/1361-6560/ab857b) | 2020-05-22|  
-H&N	|	27	|		 | 	 |	3x	| 3 | 3D T1 GRE  |	2D+ | GAN	|	def	| 65±4 |  | ME | 	p	| <±0.2 | 93.5±3.4| <1.5%  | NTCP DSC  RS γ<sub>3</sub> | Thummerer2020 |  
+H&N	|	27	|		 | 	 |	3x	| 3 | 3D T1 GRE  |	2D+ | GAN	|	def	| 65±4 |  | ME | 	p	| <±0.2 | 93.5±3.4| <1.5%  | NTCP DSC  RS γ<sub>3</sub> | [Thummerer2020](https://doi.org/10.1088/1361-6560/abb1d6)| 2020-11-27|
 Brain	|	26	|		 15		| 12	 |		| 1.0 | T1 Gd  |	2D | GAN	|	def	| |  | bone  | 	x	| <±1 | | <1.5%  |   | [Liu2021](https://doi.org/10.1002/acm2.13139) | 2021-01-07|  
 
 **Super/subscripts**  
@@ -102,3 +102,6 @@ Brain	|	26	|		 15		| 12	 |		| 1.0 | T1 Gd  |	2D | GAN	|	def	| |  | bone  | 	x	| 
 **Abbreviations**  
 H&N=head and neck ; val=validation;  x-fold=cross-fold ;conf=configuration; arch=architecture; GRE=gradient echo; (T)SE=(turbo) spin-echo, mDixon = multi-contrast Dixon reconstruction; LoO=leave-one-out; (R)MSE=(root) meas squared error; ME=mean error; DSC=dice score coefficient; (N)CC=normalized cross correlation;
 
+## CBCT
+
+## PET
