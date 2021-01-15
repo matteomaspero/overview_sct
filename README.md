@@ -68,11 +68,10 @@ v=volunteers, not patients; ^1=to segment CT into several classes;  ^b =dataset 
 **Abbreviations**  
 H&N=head and neck ; val=validation;  x-fold=cross-fold ;conf=configuration; arch=architecture; GRE=gradient echo; (T)SE=(turbo) spin-echo, mDixon = multi-contrast Dixon reconstruction; LoO=leave-one-out; (R)MSE=(root) meas squared error; ME=mean error; DSC=dice score coefficient; (N)CC=normalized cross correlation; FSIM, MSIM, IS, SWD, FID, PCC look up the references ;)
 
-
 ## MRI-to-sCT with dose evaluation
 
-| Tumour site   | train | val | test | x-fold | field [T] | sequence | conf | arch | pair reg | MAE [HU] | PSNR [dB] | others| Plan | DD [%] | GPR [%] | DVH | others |  reference    |
-|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+| Tumour site   | train | val | test | x-fold | field [T] | sequence | conf | arch | pair reg | MAE [HU] | PSNR [dB] | others| Plan | DD [%] | GPR [%] | DVH | others |  reference    | pub date |
+|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
  Prostate <br>Rectum <br>Cervix	|	32	|		|	27<br>18<br>14 |		|	3<br>1.5<br>1.5/3	|	3D T1 GRE mDixon  	|	2D	|	GAN |	rig	|	60±6<br>56±5 <br>59±6  |	|		ME | x	| -0.3±0.4<br> -0.3±0.5<br>-0.1±0.3<sup>a</sup> | 99.4±0.6<sup>3</sup><br>98.5±1.1<sup>3</sup> <br> 99.6±1.9<sup>3</sup>|<1% | γ2</sub></sub> | [Maspero2018](https://doi.org/10.1088/1361-6560/aada6d) | 2018-09-10|   
 Prostate| 36 | | 15 |   | 3 | T2 TSE | 2D | U-net | def |	30±5 |	|		ME tissues |  	x	| 0.16±0.09 | 99.4<sup>2</sup> | <0.2Gy  | γ3</sub><sub> γ<sub>1<sub>| [Chen2018](https://doi.org/10.1002/mp.13247) | 2018-10-20 |
 Brain	|	26	|		|		|	2x	|	1.5	| 3D T1 GRE	|	2D+ | CNN	|	rig	|	67±11	|		|		ME, tissues DSC, dist body |	x	| -0.1±0.3 | 99.8±0.7<sup>2</sup> |   | beam γ<sub> 3</sub> depth γ<sub>1</sub>| [Dinkla2018](https://doi.org/10.1016/j.ijrobp.2018.05.058) | 2018-11 |    
@@ -114,6 +113,7 @@ Brain	|	26	|		 15		| 12	 |		| 1.0 | T1 Gd  |	2D | GAN	|	def	| |  | bone  | 	x	| 
 
 **Abbreviations**  
 H&N=head and neck ; val=validation;  x-fold=cross-fold ;conf=configuration; arch=architecture; GRE=gradient echo; (T)SE=(turbo) spin-echo, mDixon = multi-contrast Dixon reconstruction; LoO=leave-one-out; (R)MSE=(root) meas squared error; ME=mean error; DSC=dice score coefficient; (N)CC=normalized cross correlation;
+
 ## CBCT
 
 | Tumour site   | train | val | test | x-fold |  conf | arch | pair reg | MAE [HU] | PSNR [dB] |SSIM | others| Plan | DD [%] | DPR [%] |GPR [%] | DVH | others |  reference    | pub date |
@@ -146,4 +146,41 @@ H&N <br> Thorax <br> Pelvis | 25  <br>   53 <br>   205 || |    15  <br>   15 <br
 H&N=head and neck ; val=validation;  x-fold=cross-fold ;conf=configuration; arch=architecture; GRE=gradient echo; (T)SE=(turbo) spin-echo, mDixon = multi-contrast Dixon reconstruction; LoO=leave-one-out; (R)MSE=(root) meas squared error; ME=mean error; DSC=dice score coefficient; (N)CC=normalized cross correlation;
 
 
+----------------------
+
 ## PET
+
+| Region  | train | val | test | x-fold | field [T] | image contrast | conf | arch | pair reg | MAE [HU] | DSC | tracer| PET<sub>err</sub> [%] | others |  reference    | pub date|
+|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+Pelvis| 10             |           | 16               |                  | 3    | Dixon  ZTE    | 3D  patch            | U-net         | def              |                   |              | <sup>1</sup>8F-FDG   <sup></sup>68Ga-PSMA || RMSE    SUV diff    | [Leynes2017](https://doi.org/10.2967/jnumed.117.198051)           |2017-05-01  |
+Head  | 30             |           | 10               |                  | 1.5  | T1 GRE    Gd       | 2D            | auto-enc         | def                        | .971±.005<sup>a</sup>   .936±.011<sup>s</sup>|   .803±.021<sup>b</sup>      |n.a.    | -0.7±1.1               | | [Liu2018](https://doi.org/10.1148/radiol.2017170700)                  |  2017-10-19 |
+Pelvis| 12             |           | 6                |                  | 3    | T1 GRE    T2 TSE         | 3D            | CNN<sup>1</sup>           | def               |                 | .98±.01<sup>s</sup> .79±.03<sup>b</sup>  .49±.17<sup>a</sup>    | <sup>1</sup>8F-FDG    | | RMSE     | [Bradshaw2018](http://dx.doi.org/10.18383/j.tom.2018.00023) |   2018-09 |
+Head  | 30<sup></sup>p+6             |           |     8          |          |    |  UTE mDixon        | 2D          | U-net<sup>1</sup>         | def              |                 | .96±.006<sup>b</sup>      | <sup>1</sup>8F-FDG|   <1% |       | [Jang2018](https://doi.org/10.1002/mp.12964)      |   2018-5-15 |
+H&N  | 32 <br> 12          |           | 8 <br> 2      | 5<br>7             | 3    | Dixon±ZTE         | 2D         | U-net         | rig              |     13.8±1.4<br>12.6±1.5            | .76±.04<sup>b</sup><br>.80±.04<sup>b</sup> | <sup>1</sup>8F-FDG | <3 |    | [Gong2018](https://doi.org/10.1088/1361-6560/aac763)          | 2018-06-13 |
+Pelvis| 15             |           | 4                | 4         | 3    | T1 GRE  Dixon    | 2D            | U-net         | def              | |  |<sup>1</sup>8F-FDG <br> 1.8±2.4 <br> | 1.7±2.0<sup></sup>f <br>   1.8±2.4<sup>s</sup> <br>   3.8±3.9<sup>b</sup> | mu-map diff       | [Torrado2019](https://doi.org/10.2967/jnumed.118.209288)          |  2018-08-30 |
+Head  | 23             |           | 47               |                  | 3    | ZTE               | 3D   patch           | U-net         | def              |                 | .81±.03<sup>b</sup> |<sup>1</sup>8F-FDG | -0.2±5.6               | Jac  | [Blanc-Durand2019](https://doi.org/10.1371/journal.pone.0223141) |  2019-10-07|
+Head  kids   | 60             |           | 19               | 4         | 3    | T1 GRE  mDixon, UTE         | 3D            | U-net         | rig              |   |  .90±.07<sup></sup>j  |<sup>1</sup>8F-FET | |  biol tumor    vol, SUV | [Ladefoged2019](https://doi.org/10.3389/fnins.2018.01005)      |   2019-01-07 |
+Head  | 44             | 11           | 11               |                  | 1.5  | T1 GRE                | 2.5D          | U-net         | rig              |                 | |<sup>1</sup>1C-WAY  <sup>1</sup>1C-DASB | -0.49±1.7             | synt mu-map,   kin anal                   | [Spuhler2019](https://doi.org/10.2967/jnumed.118.214320)      | 2019-08-30 |
+Head  | 40             |           |               | 2         | 3    | 3D T1  GRE        | 3D  patch            | GAN           | def              | 101±40   302±79<sup>b</sup>   407±228<sup>a</sup>   8±4<sup>s</sup> | .80±.07<sup>b</sup>              | <sup>1</sup>8F-FDG|3.2±3.4  1.2±13.8<sup>b</sup>   3.2±13.6<sup>s</sup>   3.2±13.6<sup>a</sup>           | rel vol dif   surf dist ME   RMSE PSNR   SSIM SUV | [Arabi2019](https://doi.org/10.1007/s00259-019-04380-x)              | 2019-07-01   |
+Prostate      | 18             |           | 10               |                  | 3    | Dixon             | 2D            | GAN<sup>\*</sup>           | def              |                 | | <sup></sup>68Ga-PSMA              | 2.4±0.5            |  SSIM  SUV    | [Pozaruk2020](https://doi.org/10.1007/s00259-020-04816-9)   | 2020-05-11 |   
+Head  | 35             |           |               | 5         | 3    | 3D T1 GRE   mDixon+UTE<sup></sup>c        | 2.5D          | U-net         | rig              |  11.94±0.01               | .87±.03<sup>b</sup>      | <sup>1</sup>1C-PiB  <sup>1</sup>8F-MK-6240 |   <2% |       | [Gong2020](https://doi.org/10.1007/s00259-020-05061-w)        | 2020-10-27 |
+Head  | 32             |           |               | 4         | 3    | Dixon             | 3D   patch          | GAN<sup>\*</sup>   | def             |      16±2%          | .74±.05<sup>b</sup> | <sup>1</sup>8F-FDG| -1.0±13 |  SUV |     [Gong2020](https://doi.org/10.1109/TRPMS.2020.3006844)  | 2020-07-03 |   
+Thorax| 14             |           |               | LoO                 | 3    | Dixon             | 2D            | GAN<sup>\*</sup>           |  No  def               | 68±10       |        |<sup>1</sup>8F-NaF        |                       | PSNR SSIM   RMSE              | [Baydoun2020](https://doi.org/10.1016/j.ibmed.2020.100010)    | 2020-12 |     
+| |
+Body | 100            |          |         28      |             <td colspan=2> PET, no att corrected      | 2D          | U-net         | Y<sup>i</sup>              |  111±16               | .94±.01<sup>b</sup>      | <sup>1</sup>8F-FDG |   -0.6±2.0% |    abs err   | [Liu2018](https://doi.org/10.1186/s40658-018-0225-8) |2018-11-12 |          
+Body  | 100             |           |    25        |   <td colspan=2> PET, no att corrected        | 2.5D          | GAN         | Y<sup>i</sup>              |             |       | <sup>1</sup>8F-FDG | -0.8±8.6%   |   SUV ME    | [Armanious2020](https://doi.org/10.1186/s13550-020-00644-y0) | 2020-05-24 |          
+Body  | 80             |           |    39           |           <td colspan=2> PET, no att corrected  | 3D   | GAN   | Y<sup>i</sup>               |  109±19               | .87±.03<sup>b</sup>      | <sup>1</sup>8F-FDG|  0.1<3.0% |  NCC PSNR ME     | [Dong2019](https://doi.org/10.1088/1361-6560/ab4eb7)    |  2019-11-4 |
+
+**Super/subscripts**  
+^\*=comparison with other architecture has been provided; ^1= trained to segment CT/sCT into classes;
+^a= in air or bowel gas; ^b= in the bony structures; ^s= in the soft tissue; ^f in the fatty tissue;
+^+= trained in 2D on multiple view and aggregated after inference
+^t= robustness to training size was investigated
+^c= multiple combinations  (also $\pm$ Dixon reconstruction, where present) of the sequences were investigated but omitted;
+^m= data from multiple centers
+^j= expressed in terms of Jaccard index and not DSC;
+^i= intrinsically registered: PET-CT data; ^p= data from another MRI sequence used as pre-training;
+
+
+**Abbreviations**  
+H&N=head and neck ; val=validation;  x-fold=cross-fold ;conf=configuration; arch=architecture; GRE=gradient echo; (T)SE=(turbo) spin-echo, mDixon = multi-contrast Dixon reconstruction; LoO=leave-one-out; (R)MSE=(root) meas squared error; ME=mean error; DSC=dice score coefficient; (N)CC=normalized cross correlation;
