@@ -27,6 +27,11 @@ If you wish to extend the interaction with the tables, you can sort the columns 
 * install [Tampermonkey](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo/related);
 * install [Github Sort Content](https://greasyfork.org/en/scripts/21373-github-sort-content);
 
+## If you see any typos/mistakes
+
+Ok, we did our best, but you got us! That can happen, but you can contribute to the accuracy of the information in this page by proposing a commit, after having forked this repository. Matteo will keep monitored the repository and updated every two months.
+If you wish to see some changes, just reach out: we are human, so w
+
 ## MRI without dose evaluation
 
 | Tumour site   | train | val | test | x-fold | field [T] | sequence | conf | arch | pair reg | MAE [HU] | PSNR [dB] | SSIM | others |  reference    | pub date |
