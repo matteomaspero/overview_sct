@@ -1,3 +1,4 @@
+theme: jekyll-theme-cayman
 $(function() {
   $('table').tablesorter({
     theme: 'jekyll-theme-cayman',
