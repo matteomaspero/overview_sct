@@ -1,8 +1,1 @@
-theme: jekyll-theme-cayman
-$(function() {
-  $('table').tablesorter({
-    theme: 'jekyll-theme-cayman',
-    headerTemplate: '{content}{icon}'
-    // widgets: ['uitheme'] <- needed for jQuery UI & Bootstrap
-  });
-});
+
