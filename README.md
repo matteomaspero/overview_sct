@@ -3,7 +3,7 @@
 
 Repository to collect all the references on generation of synthetic computed tomography (sCT) with deep learning/convolutional networks. Generated from Spadea MF, Maspero M et al Med. Phys. 2021 (submitted). The preprint is available at: [http://arxiv.org/abs/2102.02734](http://arxiv.org/abs/2102.02734)
 
-**The site is under revision, an updated version of the tables is due sooo (within March 2021)**
+**The site is under revision, an updated version of the tables is due soon (within March 2021)**
 
 ## License
 [![CC BY-SA 4.0][cc-by-sa-shield]][cc-by-sa] 
