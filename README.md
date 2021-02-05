@@ -1,6 +1,9 @@
+
 # Overview sCT
 
-Repository to collect all the references on generation of synthetic computed tomography (sCT) with deep learning/convolutional networks. Generated from Spadea MF, Maspero M et al Med. Phys. 2021 (submitted).
+Repository to collect all the references on generation of synthetic computed tomography (sCT) with deep learning/convolutional networks. Generated from Spadea MF, Maspero M et al Med. Phys. 2021 (submitted). The preprint is available at: [http://arxiv.org/abs/2102.02734](http://arxiv.org/abs/2102.02734)
+
+**The site is under revision, an updated version of the tables is due sooo (within March 2021)**
 
 ## License
 [![CC BY-SA 4.0][cc-by-sa-shield]][cc-by-sa] 
@@ -18,7 +21,7 @@ In short, this means that anyone, even a commercial entity may re-use the conten
 
 ## Contributors
 
-Maspero M is the owner administrator of the project. Spadea Maria Francesca and Paolo Zaffino greatyl contributed to the data collection for the pubication.
+Maspero M is the owner administrator of the project. Spadea Maria Francesca and Paolo Zaffino greatly contributed to the data collection for the pubication.
 
 The following added content: ...
 
@@ -30,8 +33,8 @@ If you wish to extend the interaction with the tables, you can sort the columns 
 
 ## If you see any typos/mistakes
 
-Ok, we did our best, but you got us! That can happen, but you can contribute to the accuracy of the information in this page by proposing a commit, after having forked this repository. Matteo will keep monitored the repository and updated every two months.
-If you wish to see some changes, just reach out: we are human, so w
+Ok, we did our best, but you got us! That can happen, but you can contribute to the accuracy of the information in this page by proposing a commit, after having forked this repository. Matteo will keep monitored the repository and update it every two months.
+If you wish to see some changes, just reach out; we are more than happy to hear your comments/suggestions.
 
 ## MRI without dose evaluation
 
