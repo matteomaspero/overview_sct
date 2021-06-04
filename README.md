@@ -1,6 +1,6 @@
 # Overview sCT
 
-Repository to collect all the references on generation of synthetic computed tomography (sCT) with deep learning/convolutional networks. Generated from Spadea MF, Maspero M et al Med. Phys. 2021 (provisionally accepted). The preprint is available at: [http://arxiv.org/abs/2102.02734](http://arxiv.org/abs/2102.02734). This page is available at: https://matteomaspero.github.io/overview_sct/ and its Github repository is: https://github.com/matteomaspero/overview_sct/.
+Repository to collect all the references on generation of synthetic computed tomography (sCT) with deep learning/convolutional networks. Generated from Spadea MF, Maspero M et al Med. Phys. 2021 (provisionally accepted). The preprint is available at: [http://arxiv.org/abs/2102.02734](http://arxiv.org/abs/2102.02734). This page is available at: [https://matteomaspero.github.io/overview_sct/](https://matteomaspero.github.io/overview_sct/) and its Github repository is: [https://github.com/matteomaspero/overview_sct/](https://github.com/matteomaspero/overview_sct/).
 
 **By the end of 2021 the table will be updated, so far all the paper up to Jan 2021 are included**
 
