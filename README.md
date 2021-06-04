@@ -20,7 +20,7 @@ In short, this means that anyone, even a commercial entity may re-use the conten
 
 ## Contributors
 
-Maspero M is the owner administrator of the project. Spadea Maria Francesca and Paolo Zaffino greatly contributed to the data collection for the pubication.
+Maspero M is the owner administrator of the project. Spadea Maria Francesca and Paolo Zaffino greatly contributed to the data collection for the publication.
 
 The following added content: ...
 
@@ -166,23 +166,6 @@ Body  | 100             |           |    25        |    PET, no att corrected   
 Body  | 80             |           |    39           |            PET, no att corrected  | 3D   | GAN   | Y<sup>i</sup>               |  109±19               | .87±.03<sup>b</sup>      | <sup>1</sup>8F-FDG|  0.1<3.0% |  NCC PSNR ME     | [Dong2019](https://doi.org/10.1088/1361-6560/ab4eb7)    |  2019-11-4 |
 
 **Super/subscripts**  
-<sup>\*</sup>comparison with other architecture has been provided; <sup>3</sup>γ<sub>3%,3mm</sub> = γ<sub>3</sub>; <sup>2</sup>γ<sub>2%,2mm</sub> = γ<sub>2</sub>; <sup>1</sup> γ<sub>1%,1mm</sub> = γ<sub>1</sub>; <sup>t</sup>robustenss to training size was investigated; <sup>+</sup>trained in 2D on multiple view and aggregated after inference;  <sup>c</sup> multiple combinations  (also $\pm$ Dixon reconstruction, where present) of the sequences were investigated but omitted;
-<sup>m</sup> data from multiple centers   
+<sup>\*</sup>comparison with other architecture has been provided; <sup>a</sup>in air or bowel gas; <sup>b</sup>in the bony structures; <sup>s</sup>in the soft tissue; <sup>f</sup> in the fatty tissue; <sup>w</sup> in water; <sup>j</sup>expressed in terms of Jaccard index and not DSC; <sup>i</sup>intrinsically registered: PET-CT data; <sup>p</sup>data from another MRI sequence used as pre-training; <sup>c</sup> multiple combinations  (also $\pm$ Dixon reconstruction, where present) of the sequences were investigated but omitted;
 **Abbreviations**  
-H&N=head and neck ; val=validation;  x-fold=cross-fold ;conf=configuration; arch=architecture; GRE=gradient echo; (T)SE=(turbo) spin-echo, mDixon = multi-contrast Dixon reconstruction; LoO=leave-one-out; (R)MSE=(root) meas squared error; ME=mean error; DSC=dice score coefficient; (N)CC=normalized cross correlation;
-
-
-
-**Super/subscripts**  
-^\*=comparison with other architecture has been provided; ^1= trained to segment CT/sCT into classes;
-^a= in air or bowel gas; ^b= in the bony structures; ^s= in the soft tissue; ^f in the fatty tissue;
-^+= trained in 2D on multiple view and aggregated after inference
-^t= robustness to training size was investigated
-^c= multiple combinations  (also $\pm$ Dixon reconstruction, where present) of the sequences were investigated but omitted;
-^m= data from multiple centers
-^j= expressed in terms of Jaccard index and not DSC;
-^i= intrinsically registered: PET-CT data; ^p= data from another MRI sequence used as pre-training;
-
-
-**Abbreviations**  
-H&N=head and neck ; val=validation;  x-fold=cross-fold ;conf=configuration; arch=architecture; GRE=gradient echo; (T)SE=(turbo) spin-echo, mDixon = multi-contrast Dixon reconstruction; LoO=leave-one-out; (R)MSE=(root) meas squared error; ME=mean error; DSC=dice score coefficient; (N)CC=normalized cross correlation;
+H&N=head and neck ; val=validation;  x-fold=cross-fold ;conf=configuration; arch=architecture; GRE=gradient echo; (T)SE=(turbo) spin-echo, mDixon = multi-contrast Dixon reconstruction; LoO=leave-one-out; (R)MSE=(root) meas squared error; ME=mean error; DSC=dice score coefficient; (N)CC=normalized cross correlation; paed=paediatric
