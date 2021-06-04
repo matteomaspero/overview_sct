@@ -106,46 +106,39 @@ H&N	|	135<sup>t</sup>	|	10	|  28		|	  |	3	| 3D T1 GRE   |	2D pair <br>unp | GAN<
 H&N	|	27	|		 | 	 |	3x	| 3 | 3D T1 GRE  |	2D+ pair | GAN	|	def	| 65±4 |  | ME | 	p	| <±0.2 | 93.5±3.4| <1.5%  | NTCP DSC  RS γ<sub>3</sub> | [Thummerer2020](https://doi.org/10.1088/1361-6560/abb1d6)| 2020-11-27|
 Breast	|	12<sup>t</sup>	|		|  18		|	LtO	|	1.5	| 3D GRE mDixon  |	2D<br>+ patch | GAN<sup>\*</sup>	|	def	| 94±11<br>103±15  | 	|	 NCC | p	| <0.5 | 98.4±3.5<sup>2</sup> |   | DRR dist bone  | [Olberg2019](https://doi.org/10.1002/mp.13927) | 2019-11-16 |  
 
-**Abbreviations**  
-H&N=head and neck ; val=validation;  x-fold=cross-fold ;conf=configuration; arch=architecture; GRE=gradient echo; (T)SE=(turbo) spin-echo, mDixon = multi-contrast Dixon reconstruction; LoO=leave-one-out; (R)MSE=(root) meas squared error; ME=mean error; DSC=dice score coefficient; (N)CC=normalized cross correlation;
-
 **Super/subscripts**  
 <sup>\*</sup>comparison with other architecture has been provided; <sup>3</sup>γ<sub>3%,3mm</sub> = γ<sub>3</sub>; <sup>2</sup>γ<sub>2%,2mm</sub> = γ<sub>2</sub>; <sup>1</sup> γ<sub>1%,1mm</sub> = γ<sub>1</sub>; <sup>t</sup>robustenss to training size was investigated; <sup>+</sup>trained in 2D on multiple view and aggregated after inference;  <sup>c</sup> multiple combinations  (also $\pm$ Dixon reconstruction, where present) of the sequences were investigated but omitted;
 <sup>m</sup> data from multiple centers   
 **Abbreviations**  
-H&N=head and neck ; val=validation;  x-fold=cross-fold ;conf=configuration; arch=architecture; GRE=gradient echo; (T)SE=(turbo) spin-echo, mDixon = multi-contrast Dixon reconstruction; LoO=leave-one-out; (R)MSE=(root) meas squared error; ME=mean error; DSC=dice score coefficient; (N)CC=normalized cross correlation; FSIM, MSIM, IS, SWD, FID, PCC look up the references ;)
+H&N=head and neck ; val=validation;  x-fold=cross-fold ;conf=configuration; arch=architecture; GRE=gradient echo; (T)SE=(turbo) spin-echo, mDixon = multi-contrast Dixon reconstruction; LoO=leave-one-out; (R)MSE=(root) meas squared error; ME=mean error; DSC=dice score coefficient; (N)CC=normalized cross correlation;
 
 ## CBCT
 
 | Tumour site   | train | val | test | x-fold |  conf | arch | pair reg | MAE [HU] | PSNR [dB] |SSIM | others| Plan | DD [%] | DPR [%] |GPR [%] | DVH | others |  reference    | pub date |
 |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
-Prostate   | 16  | | 4  | 5x  | 2D   | U-net | def  |   | 50.9 |.967  | SNU RMSE   | No    |   || |  |  |  [Kida2018](https://doi.org/10.7759/cureus.2548) | 2018-04-29|  
-Prostate   | 27  | 7  | 8  |     | 2D   | U-net<sup>\*</sup>  | def   | 88    |   | | ME|  x<br>p|  |      >98.4<sup>1</sup><br>88.5<sup>3</sup>    |  99.5<sup>2</sup> <br>>96.5<sup>2</sup> |      |    γ<sub> </sub>1 DPR<sub> 2</sub>     | [Landry2019](https://doi.org/10.1088/1361-6560/aaf496)     |  2019-01-24 |
+Pancreas   | 30                     |                 |                    | LoO                 | 3Dp pair   | GAN<sup>\*</sup>   | def   | 56.89±13.84  | 28.80±2.46 | .71±.032  | NCC|   SNU       | x             |          | |   <1Gy |           | [Liu2020](https://doi.org/10.1002/mp.14121) | 2020-03-06|
+Brain <br>Pelvis     | 24<br>20   | |     | LoO    | 3D patch     | GAN           |  rig   | 13±2<br>16±5 | 37.5±2.3 <br>30.7±3.7|   | NCC SNU      |       No      |                 | |          |  |  |[Harms2019](https://doi.org/10.1002/mp.13656)| 2019-06-17 |      
+Prostate   | 16  | | 4  | 5x  | 2D pair   | U-net | def  |   | 50.9 |.967  | SNU RMSE   | No    |   || |  |  |  [Kida2018](https://doi.org/10.7759/cureus.2548) | 2018-04-29|  
+Prostate   | 27  | 7  | 8  |     | 2D pair   | U-net<sup>\*</sup>  | def   | 88    |   | | ME|  x<br>p|  |      >98.4<sup>1</sup><br>88.5<sup>3</sup>    |  99.5<sup>2</sup> <br>>96.5<sup>2</sup> |      |    γ<sub> </sub>1 DPR<sub> 2</sub>     | [Landry2019](https://doi.org/10.1088/1361-6560/aaf496)     |  2019-01-24 |
+Prostate    | 18 | | 8                     | 4x                  | 2D  ens unp   | GAN           | No|   rig   | 87±5   | |    | ME          | x<br>p|   99.9±0.3<sup>2</sup> <br>   80.5±5<sup>2</sup>   | 95.9±2.0<sup>2</sup>       |  <±1.5% <br>  <1%     | DPR<sup>1</sup>   DPR<sup>3</sup> RS γ<sub>3</sub>  |  [Kurz2019](https://doi.org/10.1088/1361-6560/ab4d8c) |   2019-11-15|
+Prostate   | 16                     |                 | 4                     |                  | 2D pair                | GAN<sup>\*</sup>           | rig   |   | |    | SelfSSIM   tissues |         No      |                 | |      |    |      | [Kida2019](https://doi.org/10.1002/mp.13963)         | 2019-12-16|
+Pelvis<br> H&N|   135                    | 15                 | 15<br>   10         | 10x                 | 2.5D pair              | GAN<sup>\*</sup>           |  def   | 24±5<br> 24±4                 | 20.1±3.4<br> 22.8±3.4             |    |     |     x, p | <1% |        | |   |     RS | [Zhang2020](https://doi.org/10.1002/mp.14624)      |2020-12-01 |   
+H&N<br>  Lung<br>   Breast     | 15<br> 15<br> 15  | 8<br>8<br>8 | 10<br>10<br>10 |                  | 2D                 | GAN<sup>\*</sup>           | No  rig   | 53±12<br>83±10<br>66±18       | 30.5±2.2<br>  28.5±1.6<br> 29.0±2.1 | .81±.04<br> .78±.04<br> .76±.02 | ME          | x             | 0.1±0.5 <br>   0.2±0.9 <br>0.1±0.4        |   |     97.8±1<sup>2</sup><br> 94.9±3<sup>2</sup><br>   92±8<sup>2</sup>   | <2%     | γ<sub> 3</sub>    | [Maspero2020](https://doi.org/10.1016/j.phro.2020.04.002)  | 2020-04-29 |   
 H&N | 81   | 9            | 20          |                  | 2D                 | GAN<sup>\*</sup>           |  No   def   | 29.85±4.94   | 30.65±1.36 | .85±.03   | RMSE  phantom        |    x           |          |    |    98.4±1.7<sup>2</sup>    96.3±3.6<sup>1</sup>   |      |          |  [Liang2019](https://doi.org/10.1088/1361-6560/ab22f9) | 2019-06-10 |   
 Nasophar| 50                     | 10                 | 10                    |       | 2D                 | U-net         | rig   | 6-27| |    | ME   organs      |   x      |        0.2±0.1| |95.5±1.6<sup>1</sup>   | <1%   |      |     [Li2019](https://doi.org/10.1088/1361-6560/ab2770)   | 2019-07-16 |  
-Brain <br>Pelvis     | 24<br>20   | |     | LoO    | 3D patch     | GAN           |  rig   | 13±2<br>16±5 | 37.5±2.3 <br>30.7±3.7|   | NCC SNU      |       No      |                 | |          |  |  |[Harms2019](https://doi.org/10.1002/mp.13656)| 2019-06-17 |      
-Prostate    | 18 | | 8                     | 4x                  | 2D  ens   | GAN           | No|   rig   | 87±5   | |    | ME          | x<br>p|   99.9±0.3<sup>2</sup> <br>   80.5±5<sup>2</sup>   | 95.9±2.0<sup>2</sup>       |  <±1.5% <br>  <1%     | DPR<sup>1</sup>   DPR<sup>3</sup> RS γ<sub>3</sub>  |  [Kurz2019](https://doi.org/10.1088/1361-6560/ab4d8c) |   2019-11-15|
-H&N<br>  Lung<br>   Breast     | 15<br> 15<br> 15  | 8<br>8<br>8 | 10<br>10<br>10 |                  | 2D                 | GAN<sup>\*</sup>           | No  rig   | 53±12<br>83±10<br>66±18       | 30.5±2.2<br>  28.5±1.6<br> 29.0±2.1 | .81±.04<br> .78±.04<br> .76±.02 | ME          | x             | 0.1±0.5 <br>   0.2±0.9 <br>0.1±0.4        |   |     97.8±1<sup>2</sup><br> 94.9±3<sup>2</sup><br>   92±8<sup>2</sup>   | <2%     | γ<sub> 3</sub>    | [Maspero2020](https://doi.org/10.1016/j.phro.2020.04.002)  | 2020-04-29 |   
-Pancreas   | 30                     |                 |                    | LoO                 | 3D   patch   | GAN<sup>\*</sup>   | def   | 56.89±13.84  | 28.80±2.46 | .71±.032  | NCC|   SNU       | x             |          | |   <1Gy |           | [Liu2020](https://doi.org/10.1002/mp.14121) | 2020-03-06|
-H&N | 30                     | 7                  | 7                     |                  | 2D                 | U-net<sup>\*</sup>         | rig   | 18.98| 33.26      | 0.8911| RMSE   tissues        |      No         |            |     | |       |          | [Chen2019](https://doi.org/10.1002/mp.13978) | 2019-12-18 |  
+H&N | 30                     | 7                  | 7                     |                  | 2D                 | U-net<sup>\*</sup>         | rig   | 18.98| 33.26      | 0.8911| RMSE   tissues        |      No         |            |     | |       |          | [Chen2019](https://doi.org/10.1002/mp.13978) | 2019-12-18 | 
 H&N | 30                     |                 | 14                    |                  | 2D                 | GAN           | def   | 82±11    | |    | ME  tissues          | x                              | 91.0±5.3<sup>2</sup>    | |      <1Gy|  <1% |         | [Barateau2020](https://doi.org/10.1002/mp.14387)| 2020-07-12 |   
 H&N | 22                     |                 | 11                    | 3x                  | 2D+ | U-net         | def   | 36±6     | |    | ME DSC   SNU   | p           |    -0.1±0.3      | | 98.1±1.2<sup>2</sup>    |      | RS    γ<sub> 3</sub> |[Thummerer2020](https://doi.org/10.1088/1361-6560/ab7d54) | 2020-04-27|   
 H&N | 50<sup>t</sup>               |                 | 10                    |                  | 2.5D               | U-net         | rig   | 49   | | .85  | SNR         |         No      |                 | |      |   |       | [Yuan2020](https://doi.org/10.1088/1361-6560/ab6240) |2020-01-24|    
-Prostate   | 16                     |                 | 4                     |                  | 2D                 | GAN<sup>\*</sup>           | rig   |   | |    | SelfSSIM   tissues |         No      |                 | |      |    |      | [Kida2019](https://doi.org/10.1002/mp.13963)         | 2019-12-16|
-Pelvis<br> H&N|   135                    | 15                 | 15<br>   10         | 10x                 | 2.5D               | GAN<sup>\*</sup>           |  def   | 24±5<br> 24±4                 | 20.1±3.4<br> 22.8±3.4             |    |     |     x, p | <1% |        | |   |     RS | [Zhang2020](https://doi.org/10.1002/mp.14624)      |2020-12-01 |   
 H&N    | 23   | |     | LoO    | 3D patch     | GAN<sup>\*</sup>           |  rig   |  | 24.3±1.4| .80±.05  | stop power      |       p |     |     | 88.4<sup>2</sup> |   <1%       | γ<sub>3</sub> γ<sub>2</sub> |  [Harms2019](https://doi.org/10.1002/mp.14347)| 2019-06-17 |
 H&N <br> Thorax <br> Pelvis | 25  <br>   53 <br>   205 || |    15  <br>   15 <br>   15                 | 2D                 | GAN           | def    | 77±13  <br>   94±32  <br>   42±5 |  | |    ME DSC   HD tissues    |            x |  |  91.5±4.3<sup>2</sup> <br>   76.7±17.3<sup>2</sup> <br>   88.9±9.3<sup>2</sup> | 95.0±2.4<sup>2</sup>  <br>  93.8±5.9<sup>2</sup>   <br>  98.5±1.7<sup>2</sup> |   <2.4  <br>  <2.6  <br>  <1  | γ<sub> 3</sub>   | [Eckl2020](https://doi.org/10.1016/j.ejmp.2020.11.007)          |   2020-11-24 |
 
-**Super/subscripts**  
-^\*=comparison with other architecture has been provided; ^1=to segment CT into several classes; ^a=multiple combinations of Dixon images was investigated but omitted here; ^3= γ<sub>3%,3mm</sub> = γ<sub>3</sub>, ^2 γ<sub>2%,2mm</sub> = γ<sub>3</sub>, ^1 γ<sub>1%,1mm</sub> = γ<sub>1</sub>
-^+ trained in 2D on multiple view and aggregated after inference
-^t robustness to training size was investigated
-^c multiple combinations  (also $\pm$ Dixon reconstruction, where present) of the sequences were investigated but omitted;
-^m data from multiple centers
 
+**Super/subscripts**  
+<sup>\*</sup>comparison with other architecture has been provided; <sup>3</sup>γ<sub>3%,3mm</sub> = γ<sub>3</sub>; <sup>2</sup>γ<sub>2%,2mm</sub> = γ<sub>2</sub>; <sup>1</sup> γ<sub>1%,1mm</sub> = γ<sub>1</sub>; <sup>t</sup>robustenss to training size was investigated; <sup>+</sup>trained in 2D on multiple view and aggregated after inference;  <sup>c</sup> multiple combinations  (also $\pm$ Dixon reconstruction, where present) of the sequences were investigated but omitted;
+<sup>m</sup> data from multiple centers   
 **Abbreviations**  
 H&N=head and neck ; val=validation;  x-fold=cross-fold ;conf=configuration; arch=architecture; GRE=gradient echo; (T)SE=(turbo) spin-echo, mDixon = multi-contrast Dixon reconstruction; LoO=leave-one-out; (R)MSE=(root) meas squared error; ME=mean error; DSC=dice score coefficient; (N)CC=normalized cross correlation;
-
 
 ----------------------
 
@@ -168,9 +161,17 @@ Head  | 35             |           |               | 5         | 3    | 3D T1 GR
 Head  | 32             |           |               | 4         | 3    | Dixon             | 3D   patch          | GAN<sup>\*</sup>   | def             |      16±2%          | .74±.05<sup>b</sup> | <sup>1</sup>8F-FDG| -1.0±13 |  SUV |     [Gong2020](https://doi.org/10.1109/TRPMS.2020.3006844)  | 2020-07-03 |   
 Thorax| 14             |           |               | LoO                 | 3    | Dixon             | 2D            | GAN<sup>\*</sup>           |  No  def               | 68±10       |        |<sup>1</sup>8F-NaF        |                       | PSNR SSIM   RMSE              | [Baydoun2020](https://doi.org/10.1016/j.ibmed.2020.100010)    | 2020-12 |     
 | |
-Body | 100            |          |         28      |             <td colspan=2> PET, no att corrected      | 2D          | U-net         | Y<sup>i</sup>              |  111±16               | .94±.01<sup>b</sup>      | <sup>1</sup>8F-FDG |   -0.6±2.0% |    abs err   | [Liu2018](https://doi.org/10.1186/s40658-018-0225-8) |2018-11-12 |          
-Body  | 100             |           |    25        |   <td colspan=2> PET, no att corrected        | 2.5D          | GAN         | Y<sup>i</sup>              |             |       | <sup>1</sup>8F-FDG | -0.8±8.6%   |   SUV ME    | [Armanious2020](https://doi.org/10.1186/s13550-020-00644-y0) | 2020-05-24 |          
-Body  | 80             |           |    39           |           <td colspan=2> PET, no att corrected  | 3D   | GAN   | Y<sup>i</sup>               |  109±19               | .87±.03<sup>b</sup>      | <sup>1</sup>8F-FDG|  0.1<3.0% |  NCC PSNR ME     | [Dong2019](https://doi.org/10.1088/1361-6560/ab4eb7)    |  2019-11-4 |
+Body | 100            |          |         28      |              PET, no att corrected      | 2D          | U-net         | Y<sup>i</sup>              |  111±16               | .94±.01<sup>b</sup>      | <sup>1</sup>8F-FDG |   -0.6±2.0% |    abs err   | [Liu2018](https://doi.org/10.1186/s40658-018-0225-8) |2018-11-12 |          
+Body  | 100             |           |    25        |    PET, no att corrected        | 2.5D          | GAN         | Y<sup>i</sup>              |             |       | <sup>1</sup>8F-FDG | -0.8±8.6%   |   SUV ME    | [Armanious2020](https://doi.org/10.1186/s13550-020-00644-y0) | 2020-05-24 |          
+Body  | 80             |           |    39           |            PET, no att corrected  | 3D   | GAN   | Y<sup>i</sup>               |  109±19               | .87±.03<sup>b</sup>      | <sup>1</sup>8F-FDG|  0.1<3.0% |  NCC PSNR ME     | [Dong2019](https://doi.org/10.1088/1361-6560/ab4eb7)    |  2019-11-4 |
+
+**Super/subscripts**  
+<sup>\*</sup>comparison with other architecture has been provided; <sup>3</sup>γ<sub>3%,3mm</sub> = γ<sub>3</sub>; <sup>2</sup>γ<sub>2%,2mm</sub> = γ<sub>2</sub>; <sup>1</sup> γ<sub>1%,1mm</sub> = γ<sub>1</sub>; <sup>t</sup>robustenss to training size was investigated; <sup>+</sup>trained in 2D on multiple view and aggregated after inference;  <sup>c</sup> multiple combinations  (also $\pm$ Dixon reconstruction, where present) of the sequences were investigated but omitted;
+<sup>m</sup> data from multiple centers   
+**Abbreviations**  
+H&N=head and neck ; val=validation;  x-fold=cross-fold ;conf=configuration; arch=architecture; GRE=gradient echo; (T)SE=(turbo) spin-echo, mDixon = multi-contrast Dixon reconstruction; LoO=leave-one-out; (R)MSE=(root) meas squared error; ME=mean error; DSC=dice score coefficient; (N)CC=normalized cross correlation;
+
+
 
 **Super/subscripts**  
 ^\*=comparison with other architecture has been provided; ^1= trained to segment CT/sCT into classes;
