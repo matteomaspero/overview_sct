@@ -66,7 +66,7 @@ Breast	|	14	|		|	2	|	LoO	|	n.a. |	n.a.  |	2D	|	U-net<sup>1</sup>	|	def	|	|	 |	 |
 
 
 **Super/subscripts**  
-<sup>v<sup>volunteers, not patients; <sup>1<sup>to segment CT into 5-classes;  <sup>a<sup>multiple combinations of Dixon images was investigated but omitted here; <sup>b<sup>dataset from http://www.med.harvard.edu/AANLIB/ ; <sup>t<sup>robustenss to training size was investigated;<sup>\*<sup>comparison with other architecture has been provided; <sup>+<sup>trained in 2D on multiple view and aggregated after inference;
+<sup>v</sup>volunteers, not patients; <sup>1</sup>to segment CT into 5-classes;  <sup>a</sup>multiple combinations of Dixon images was investigated but omitted here; <sup>b</sup>dataset from http://www.med.harvard.edu/AANLIB/ ; <sup>t</sup>robustenss to training size was investigated;<sup>\*</sup>comparison with other architecture has been provided; <sup>+</sup>trained in 2D on multiple view and aggregated after inference;
 **Abbreviations**  
 H&N=head and neck ; val=validation;  x-fold=cross-fold ;conf=configuration; arch=architecture; GRE=gradient echo; (T)SE=(turbo) spin-echo, mDixon = multi-contrast Dixon reconstruction; LoO=leave-one-out; (R)MSE=(root) meas squared error; ME=mean error; DSC=dice score coefficient; (N)CC=normalized cross correlation; FSIM, MSIM, IS, SWD, FID, PCC look up the references ;)
 
