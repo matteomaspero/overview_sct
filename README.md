@@ -104,8 +104,7 @@ Pelvis	|	11<sup></sup>m	|		 		| 8	 |		| 3 1.5|  T2 TSE  |	2D | GAN<sup>\*</sup>	
  Pelvis	|	26	|		 15		| 10+19<sup>m</sup>	 |		| 0.35 1.5/3 | 3D T2  |	2.5D | GAN<sup>\*</sup>	|	def	| 41±4 | 31.4±1 | ME MSE bone | 	x	| <±1 | | <1.5%  |   | [Fetty2020](https://doi.org/10.1088/1361-6560/ab857b) | 2020-05-22|  
 H&N	|	27	|		 | 	 |	3x	| 3 | 3D T1 GRE  |	2D+ | GAN	|	def	| 65±4 |  | ME | 	p	| <±0.2 | 93.5±3.4| <1.5%  | NTCP DSC  RS γ<sub>3</sub> | [Thummerer2020](https://doi.org/10.1088/1361-6560/abb1d6)| 2020-11-27|
 Brain	|	26	|		 15		| 12	 |		| 1.0 | T1 Gd  |	2D | GAN	|	def	| |  | bone  | 	x	| <±1 | | <1.5%  |   | [Liu2021](https://doi.org/10.1002/acm2.13139) | 2021-01-07|  
-<td colspan="20">To be completed</td>
-brain | s |
+<td colspan="20">To be completed</td> |
 
 **Super/subscripts**  
 ^\*=comparison with other architecture has been provided; ^1=to segment CT into several classes; ^a=multiple combinations of Dixon images was investigated but omitted here; ^3= γ<sub>3%,3mm</sub> = γ<sub>3</sub>, ^2 γ<sub>2%,2mm</sub> = γ<sub>3</sub>, ^1 γ<sub>1%,1mm</sub> = γ<sub>1</sub>
