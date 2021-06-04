@@ -77,8 +77,6 @@ Liver	|	21	|		|		|	LoO	|	3	| 3D T1 GRE	|	3D pair| GAN	|	def	|	73±18	|	22.7±3.6
 Abdomen	|	12	|		 		| 	 |	4x	| 0.3 1.5 |  GRE  |	2D pair br> 2D unp| GAN<sup>\*</sup>	|	def	| 90±19<sup>2</sup> <br>94±30<sup>2</sup>  | 27.4±1.6 <br>27.2±2.2|  | 	x+B<sub>0</sub>	| <±0.6<br>	<±0.6 | 98.7±1.5%<br>98.5±1.6%  | <±0.15  |  γ<sub> 3</sub>  | [Fu2020](https://doi.org/10.1088/2057-1976/ab6e1f) |  2020-01-31 |
 Abdomen	|	46	|		|  	31	| 3x	 |	3	| 3D T1 GRE   |	2.5D pair | U-net	|	syn rig	| 79±18 |  |  MAE, ME organs |	x	|  |  | <2Gy  |   | [Liu2020](https://doi.org/10.1088/1361-6560/ab8cd2)| 2020-06-11 | 
 Abdomen kids	|	54	|	18	|  12		|	 3x |	1.5	3| 3D T1 GRE, T2 TSE  |	3Dp pair | U-net	|	def	| 62±13 | 30.0±1.8	|  ME, DSC tissues | 	x<br>p| <0.1<br><0.5 | 99.7±0.3<sup>2</sup> <br>96.2±4.0<sup>2</sup> | <2% <br><3% | beam depth  | [Florkow2020](https://doi.org/10.1016/j.radonc.2020.09.056) | 2020-10-07
-
-
 Brain	|	26	|		|		|	2x	|	1.5	| 3D T1 GRE	|	m2D+ pair | CNN	|	rig	|	67±11	|		|		ME, tissues DSC, dist body |	x	| -0.1±0.3 | 99.8±0.7<sup>2</sup> |   | beam γ<sub> 3</sub> depth γ<sub>1</sub>| [Dinkla2018](https://doi.org/10.1016/j.ijrobp.2018.05.058) | 2018-11 |   
 Brain	|	40	|		|	10	|		|	1.5	| 3D T1 GRE Gd |	2D pair | CNN	|	def	|	75±23	|	|		DSC | 	x	| <0.2±0.5 | 99.2<sup>3</sup> |   |  | [LiuF2019](https://doi.org/10.1002/acm2.12554) | 2019-03-12 |   
 Brain	|	54	|	9	|	14	|	5x	|	1.5	| 2D T1 SE Gd |	2D pair | GAN	|	rig	|	47±11	|	|		each fold |	x	| -0.7±0.5 | 99.2±0.8<sup>2</sup> | <1%  | 2D/3D γ<sub> 3</sub> γ<sub>1</sub> | [Kazemifar2019](https://doi.org/10.1016/j.radonc.2019.03.026) | 2019-04-11 |
@@ -90,8 +88,6 @@ Brain	|	15	|		 		| 	 |	5x	| |  T1, T2 FLAIR<sup>c</sup> |	2Dp pair | GAN	|	def	|
 Brain	|	66	|		 		| 11	 |	5x	| 1.5 |  2D T1 SE Gd  |	2D unp | GAN	|	rig	| 78±11 |  |   |	p	| 0.3±0.3 | 99.2±1.0<sup>2</sup>  | <3%  | beam γ<sub>3</sub>  depth γ<sub>1</sub> | [Kazemifar2020](https://doi.org/10.1002/acm2.12856) | 2020-03-26 |  
 Brain kids	|	30<sup>t</sup>	|	10	|  20		|	 3x |	1.5 3	| 3D T1 GRE±Gd   |	 2D+<sup>\*</sup> pair | GAN<sup>\*</sup>	|	rig	| 61±14 | 26.7±1.9	|  ME DSC SSIM | 	x	<br> p| -0.1±0.3<br> 0.1±0.4 | 99.5±0.8<sup>2</sup><br>99.6±1.1<sup>2</sup> | <1% <br><3% | beam depth γ<sub>3</sub>  | [Maspero2020](https://doi.org/10.1016/j.radonc.2020.09.029) | 2020-10-23 |  
 Brain	|	242<sup>m,t</sup>	|		 	81	| 79	 |		| 3 1.5|  3D T1 GRE±Gd  |	3Dp pair| CNN<br>U-net	|	def	| 81±22<br>90±21 | |tissues |	x	| 0.13±0.13<br>0.31±0.18  | 99.6±0.3<sup>2</sup><br>99.4±0.5<sup>2</sup>  | <±0.15  |  γ<sub> 3</sub>  | [Andres2020](https://doi.org/10.1016/j.ijrobp.2020.05.006) | 2020-11   |
-
-
 Prostate <br>Rectum <br>Cervix	|	32	|		|	27<br>18<br>14 |		|	3<br>1.5<br>1.5/3	|	3D T1 GRE mDixon  	|	2D	|	GAN |	rig	|	60±6<br>56±5 <br>59±6  |	|		ME | x	| -0.3±0.4<br> -0.3±0.5<br>-0.1±0.3<sup>a</sup> | 99.4±0.6<sup>3</sup><br>98.5±1.1<sup>3</sup> <br> 99.6±1.9<sup>3</sup>|<1% | γ2</sub></sub> | [Maspero2018](https://doi.org/10.1088/1361-6560/aada6d) | 2018-09-10|   
 Prostate| 36 | | 15 |   | 3 | T2 TSE | 2D | U-net | def |	30±5 |	|		ME tissues |  	x	| 0.16±0.09 | 99.4<sup>2</sup> | <0.2Gy  | γ3</sub><sub> γ<sub>1<sub>| [Chen2018](https://doi.org/10.1002/mp.13247) | 2018-10-20 |
 Prostate | 39 | | | 4x | 3 | 3D T2 | 2D | U-net | def |33±8 | |ME, DSC dist body | x |-0.01±0.64 | 98.5±0.7<sup>2</sup> | <3%  | γ<sub>3</sub> γ<sub>1</sub>| [Arabi2018](https://doi.org/10.1002/mp.13187) | 2018-10-14 |
