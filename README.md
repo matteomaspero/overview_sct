@@ -107,7 +107,7 @@ H&N	|	27	|		 | 	 |	3x	| 3 | 3D T1 GRE  |	2D+ pair | GAN	|	def	| 65±4 |  | ME | 
 Breast	|	12<sup>t</sup>	|		|  18		|	LtO	|	1.5	| 3D GRE mDixon  |	2D<br>+ patch | GAN<sup>\*</sup>	|	def	| 94±11<br>103±15  | 	|	 NCC | p	| <0.5 | 98.4±3.5<sup>2</sup> |   | DRR dist bone  | [Olberg2019](https://doi.org/10.1002/mp.13927) | 2019-11-16 |  
 
 **Super/subscripts**  
-<sup>\*</sup>comparison with other architecture has been provided; <sup>3</sup>γ<sub>3%,3mm</sub> = γ<sub>3</sub>; <sup>2</sup>γ<sub>2%,2mm</sub> = γ<sub>2</sub>; <sup>1</sup> γ<sub>1%,1mm</sub> = γ<sub>1</sub>; <sup>t</sup>robustenss to training size was investigated; <sup>+</sup>trained in 2D on multiple view and aggregated after inference;  <sup>c</sup> multiple combinations  (also $\pm$ Dixon reconstruction, where present) of the sequences were investigated but omitted;
+<sup>\*</sup>comparison with other architecture has been provided; <sup>3</sup>γ<sub>3%,3mm</sub> = γ<sub>3</sub>; <sup>2</sup>γ<sub>2%,2mm</sub> = γ<sub>2</sub>; <sup>1</sup> γ<sub>1%,1mm</sub> = γ<sub>1</sub>; <sup>t</sup>robustenss to training size was investigated; <sup>+</sup>trained in 2D on multiple view and aggregated after inference;  <sup>c</sup> multiple combinations  (also ± Dixon reconstruction, where present) of the sequences were investigated but omitted;
 <sup>m</sup> data from multiple centers   
 **Abbreviations**  
 H&N=head and neck ; val=validation;  x-fold=cross-fold ;conf=configuration; arch=architecture; GRE=gradient echo; (T)SE=(turbo) spin-echo, mDixon = multi-contrast Dixon reconstruction; LoO=leave-one-out; (R)MSE=(root) meas squared error; ME=mean error; DSC=dice score coefficient; (N)CC=normalized cross correlation;
@@ -135,7 +135,7 @@ H&N <br> Thorax <br> Pelvis | 25  <br>   53 <br>   205 || |    15  <br>   15 <br
 
 
 **Super/subscripts**  
-<sup>\*</sup>comparison with other architecture has been provided; <sup>3</sup>γ<sub>3%,3mm</sub> = γ<sub>3</sub>; <sup>2</sup>γ<sub>2%,2mm</sub> = γ<sub>2</sub>; <sup>1</sup> γ<sub>1%,1mm</sub> = γ<sub>1</sub>; <sup>t</sup>robustenss to training size was investigated; <sup>+</sup>trained in 2D on multiple view and aggregated after inference;  <sup>c</sup> multiple combinations  (also $\pm$ Dixon reconstruction, where present) of the sequences were investigated but omitted;
+<sup>\*</sup>comparison with other architecture has been provided; <sup>3</sup>γ<sub>3%,3mm</sub> = γ<sub>3</sub>; <sup>2</sup>γ<sub>2%,2mm</sub> = γ<sub>2</sub>; <sup>1</sup> γ<sub>1%,1mm</sub> = γ<sub>1</sub>; <sup>t</sup>robustenss to training size was investigated; <sup>+</sup>trained in 2D on multiple view and aggregated after inference;  <sup>c</sup> multiple combinations  (also ± Dixon reconstruction, where present) of the sequences were investigated but omitted;
 <sup>m</sup> data from multiple centers   
 **Abbreviations**  
 H&N=head and neck ; val=validation;  x-fold=cross-fold ;conf=configuration; arch=architecture; GRE=gradient echo; (T)SE=(turbo) spin-echo, mDixon = multi-contrast Dixon reconstruction; LoO=leave-one-out; (R)MSE=(root) meas squared error; ME=mean error; DSC=dice score coefficient; (N)CC=normalized cross correlation;
@@ -166,6 +166,6 @@ Body  | 100             |           |    25        |    PET, no att corrected   
 Body  | 80             |           |    39           |            PET, no att corrected  | 3D   | GAN   | Y<sup>i</sup>               |  109±19               | .87±.03<sup>b</sup>      | <sup>1</sup>8F-FDG|  0.1<3.0% |  NCC PSNR ME     | [Dong2019](https://doi.org/10.1088/1361-6560/ab4eb7)    |  2019-11-4 |
 
 **Super/subscripts**  
-<sup>\*</sup>comparison with other architecture has been provided; <sup>a</sup>in air or bowel gas; <sup>b</sup>in the bony structures; <sup>s</sup>in the soft tissue; <sup>f</sup> in the fatty tissue; <sup>w</sup> in water; <sup>j</sup>expressed in terms of Jaccard index and not DSC; <sup>i</sup>intrinsically registered: PET-CT data; <sup>p</sup>data from another MRI sequence used as pre-training; <sup>c</sup> multiple combinations  (also $\pm$ Dixon reconstruction, where present) of the sequences were investigated but omitted;
+<sup>\*</sup>comparison with other architecture has been provided; <sup>a</sup>in air or bowel gas; <sup>b</sup>in the bony structures; <sup>s</sup>in the soft tissue; <sup>f</sup> in the fatty tissue; <sup>w</sup> in water; <sup>j</sup>expressed in terms of Jaccard index and not DSC; <sup>i</sup>intrinsically registered: PET-CT data; <sup>p</sup>data from another MRI sequence used as pre-training; <sup>c</sup> multiple combinations  (also ± Dixon reconstruction, where present) of the sequences were investigated but omitted;
 **Abbreviations**  
 H&N=head and neck ; val=validation;  x-fold=cross-fold ;conf=configuration; arch=architecture; GRE=gradient echo; (T)SE=(turbo) spin-echo, mDixon = multi-contrast Dixon reconstruction; LoO=leave-one-out; (R)MSE=(root) meas squared error; ME=mean error; DSC=dice score coefficient; (N)CC=normalized cross correlation; paed=paediatric
